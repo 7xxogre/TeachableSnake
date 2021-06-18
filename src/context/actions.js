@@ -27,12 +27,17 @@ export const useActions = (state, dispatch) => {
 			arrowDown,
 			arrowLeft
 		} = keys
-		const keyCode = event
+		var keyCode = event
 			? event.keyCode
 				? event.keyCode
 				: event.predictType
 			: null
-
+		if(event !== undefined)
+		{	
+			console.log(event['predictType'])
+		
+			keyCode = keys[event['predictType']]
+		}
 		switch(keyCode) {
 			case LEFT:
 			case arrowLeft:

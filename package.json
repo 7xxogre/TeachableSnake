@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@teachablemachine/image": "^0.8.4",
+    "@tensorflow/tfjs": "^3.7.0",
     "node-sass": "^4.11.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "2.1.8",
+    "react-scripts": "^2.1.8",
     "react-transition-group": "1.x"
   },
   "scripts": {

@@ -1,6 +1,8 @@
 import React, { useContext, useState, useEffect } from 'react'
 import { StoreContext } from '../../context/StoreContext'
 import './GameBoard.scss'
+import * as tf from '@tensorflow/tfjs'
+import * as tmImage from '@teachablemachine/image'
 
 import SnakeCanvas from '../SnakeCanvas'
 import loadVideo from '../../utilities/camera'
@@ -15,15 +17,23 @@ function GameBoard () {
 	const [model, setModel] = useState(null)
 
 	async function loadModel() {
-		const loadedModel = await tm.mobilenet.load(staticStore.model.checkPoint)
+		const loadedModel = await tmImage.load("https://teachablemachine.withgoogle.com/models/5FOG9ynos/model.json", 
+												"https://teachablemachine.withgoogle.com/models/5FOG9ynos/metadata.json")
 		setModel(loadedModel)
 	}
 
 	async function predictVideo(image) {
 		if (model) {
-			const prediction = await model.predict(image, 4)
-			const predictType = prediction[0].className
-
+			const prediction = await model.predict(image)
+			var i, j = 0
+			var maxpred = 0.0;
+			for (i = 0; i < 4; i++)	{
+				if (maxpred < prediction[i].probability)	{
+					j = i
+					maxpred = prediction[i].probability
+				}
+			}
+			const predictType = prediction[j].className
 			if (isInFrame) actions.updateSnakePosition({ predictType })
 
 			predictVideo(userWebCam)
