@@ -25,6 +25,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
+## 티처블 머신으로 학습시킬시
+[class name](https://i.ibb.co/M6RCkpV/image.png) 
+
+위와 같이 클래스 이름을 UP, DOWN, LEFT, RIGHT로 지정하고 학습 시켜야 합니다.
+
+
 ### `npm run build`
 
 Builds the app for production to the `build` folder.<br>
