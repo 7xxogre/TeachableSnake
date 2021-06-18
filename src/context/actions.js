@@ -34,7 +34,9 @@ export const useActions = (state, dispatch) => {
 			: null
 		if(event !== undefined)
 		{	
-			keyCode = keys[event['predictType']]
+			var s = String(event['predictType'])
+			console.log(s)
+			keyCode = keys[s.toUpperCase()]
 		}
 		switch(keyCode) {
 			case LEFT:
