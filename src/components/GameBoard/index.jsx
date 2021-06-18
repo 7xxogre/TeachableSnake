@@ -17,8 +17,8 @@ function GameBoard () {
 	const [model, setModel] = useState(null)
 
 	async function loadModel() {
-		const loadedModel = await tmImage.load("https://teachablemachine.withgoogle.com/models/5FOG9ynos/model.json", 
-												"https://teachablemachine.withgoogle.com/models/5FOG9ynos/metadata.json")
+		const loadedModel = await tmImage.load("https://teachablemachine.withgoogle.com/models/UGpOJqGQh/model.json", 
+												"https://teachablemachine.withgoogle.com/models/UGpOJqGQh/metadata.json")
 		setModel(loadedModel)
 	}
 
