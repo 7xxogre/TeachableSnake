@@ -20,11 +20,10 @@ Bootstrapped with [Create React App](https://github.com/facebook/create-react-ap
 
 ## Available Scripts
 
-At first you must type this!
-
-### `npm install`
 
 In the project directory, you can run:
+
+### `npm install`
 
 ### `npm start`
 
