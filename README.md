@@ -18,6 +18,8 @@ Bootstrapped with [Create React App](https://github.com/facebook/create-react-ap
 
 위와 같이 클래스 이름을 UP, DOWN, LEFT, RIGHT로 지정하고 학습 시켜야 합니다.
 
+학습된 모델과 metadata json의 주소를 "src/components/GameBoard/index.jsx" 파일의 19 ~ 20번째 줄의 await tmImage.load()인자 값에 넣어줘야 합니다.
+
 ## Available Scripts
 
 
